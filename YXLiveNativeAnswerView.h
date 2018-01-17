@@ -7,19 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "YXLiveNativeAlertBaseView.h"
 #import "YXLiveMillionModel.h"
 
-typedef NS_ENUM(NSUInteger, YXLiveAnswerViewType) {
-    YXLiveAnswerViewTypeAnswer,
-    YXLiveAnswerViewTypeResult,
-};
+@protocol YXLiveNativeAnswerViewDelegate <NSObject>
+- (void)didSelectAtIndex:(NSUInteger)index andTitle:(NSString *)title;
 
-@interface YXLiveNativeAnswerView : YXLiveNativeAlertBaseView
+@end
 
-- (void)setModel:(YXLiveMillionModel *)model isWatch:(BOOL)watch andType:(YXLiveAnswerViewType)type;
 
-//- (instancetype)initWithType:(YXLiveAnswerViewType)type
+@interface YXLiveNativeAnswerView : UIView
+@property (nonatomic, weak) id<YXLiveNativeAnswerViewDelegate> delegate;
 
+- (void)setModel:(YXLiveMillionModel *)model;
+
+- (void)showInView:(UIView *)view withAnimation:(BOOL)animation;
+
+- (void)dismissWithAnimation:(BOOL)animation;
 
 @end

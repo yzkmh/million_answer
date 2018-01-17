@@ -9,7 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface YXLiveMillionAnswerButton : UIButton
+@property (nonatomic, strong) UIColor *progressColor;
+@property (nonatomic ,strong) UILabel *numLabel;
 
 - (void)setNum:(NSInteger)num andProgress:(CGFloat)progress;
+- (void)resetButton;
+
+
 
 @end

@@ -7,15 +7,14 @@
 //
 
 #import "YXLiveMillionAnswerButton.h"
-static CGFloat const kLineWidth = 2.5f;
+#import "UIColor+YXTColor.h"
 
 @interface YXLiveMillionAnswerButton ()
-{
-    UIColor *_progressColor;
-}
-@property (nonatomic ,strong) UILabel *numLabel;
+
 @property (nonatomic, strong) CAShapeLayer *progressLayer; //进度条
 @property (nonatomic, strong) CADisplayLink *displayLink;
+@property (nonatomic, assign) CGFloat animationProgress;
+@property (nonatomic, assign) CGFloat progress;
 @end
 
 @implementation YXLiveMillionAnswerButton
@@ -27,6 +26,8 @@ static CGFloat const kLineWidth = 2.5f;
     if (button) {
         button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
         button.contentEdgeInsets = UIEdgeInsetsMake(0,20, 0, 0);
+        [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [button.titleLabel setFont:[UIFont systemFontOfSize:14]];
     }
     return button;
 }
@@ -34,20 +35,56 @@ static CGFloat const kLineWidth = 2.5f;
 - (void)setFrame:(CGRect)frame
 {
     [super setFrame:frame];
-    [self addSubview:self.numLabel];
-    self.numLabel.hidden = YES;
+//    // 加载图片
+//    UIImage *image = [UIImage imageNamed:@"million_btn_rect"];
+//
+//    // 设置左边端盖宽度
+//    NSInteger leftCapWidth = image.size.width * 0.5;
+//    // 设置上边端盖高度
+//    NSInteger topCapHeight = image.size.height * 0.5;
+//
+//    UIImage *newImage = [image stretchableImageWithLeftCapWidth:leftCapWidth topCapHeight:topCapHeight];
+//
+//
+//    [self setBackgroundImage:newImage forState:UIControlStateNormal];
+    
+    self.layer.masksToBounds = YES;
+    self.layer.cornerRadius = frame.size.height/2;
+    self.layer.borderColor = [UIColor yxt_colorWithHex:@"DDDDDD"].CGColor;
+    self.layer.borderWidth = 0.6f;
+    [self addBorderToLayer:self];
+//    _progressColor = [UIColor colorWithRed:66/255. green:204/255. blue:118/255. alpha:1];
+    
+    self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(updateUI)];
+    self.displayLink.paused = YES;
+    [self.displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+    
 }
 
+- (void)updateUI
+{
+    _animationProgress += 1/60.f;
+    if (_animationProgress > _progress) {
+        _animationProgress = _progress;
+        _displayLink.paused = YES;
+    }
+    [self setProgress:_animationProgress];
+}
 
 - (void)setNum:(NSInteger)num andProgress:(CGFloat)progress
 {
+    if (progress > 0 && progress < 0.01) {
+        progress = 0.01;
+    }
+    [self addSubview:self.numLabel];
     self.numLabel.hidden = NO;
     [self.numLabel setText:[NSString stringWithFormat:@"%ld",(long)num]];
-    _progressColor = [UIColor colorWithRed:66/255. green:204/255. blue:118/255. alpha:1];
-    [self.layer addSublayer:self.progressLayer];
-    [UIView animateWithDuration:0.3 animations:^{
-        [self setProgress:progress];
-    }];
+    
+    [self.layer insertSublayer:self.progressLayer atIndex:0];
+    
+    _animationProgress = 0;
+    _progress = progress;
+    self.displayLink.paused = NO;
 }
 
 - (UILabel *)numLabel
@@ -56,6 +93,7 @@ static CGFloat const kLineWidth = 2.5f;
         _numLabel = [[UILabel alloc]initWithFrame:CGRectMake(0.f, CGRectGetHeight(self.frame)/2 - 10, CGRectGetWidth(self.frame) - 20, 20)];
         _numLabel.font = [UIFont systemFontOfSize:14];
         _numLabel.textAlignment = NSTextAlignmentRight;
+        _numLabel.textColor = [UIColor blackColor];
     }
     return _numLabel;
 }
@@ -68,6 +106,22 @@ static CGFloat const kLineWidth = 2.5f;
     });
 }
 
+- (void)resetButton
+{
+    if (self.progressLayer.superlayer) {
+        [self.progressLayer removeFromSuperlayer];
+    }
+    self.backgroundColor = [UIColor clearColor];
+}
+
+- (void)setProgressColor:(UIColor *)progressColor
+{
+    _progressColor = progressColor;
+    if (_progressLayer) {
+        _progressLayer.strokeColor = _progressColor.CGColor;
+    }
+}
+
 /**
  进度条路径
  
@@ -76,9 +130,8 @@ static CGFloat const kLineWidth = 2.5f;
 - (UIBezierPath *)progressPathWithProgress:(CGFloat)progress
 {
     UIBezierPath *path = [UIBezierPath bezierPath];
-    CGPoint startPoint = CGPointMake(0, 0);
-    CGPoint endPoint = CGPointMake(self.frame.size.width*progress, 0);
-    //    NSLog(@"%f",progress);
+    CGPoint startPoint = CGPointMake(0, self.frame.size.height/2);
+    CGPoint endPoint = CGPointMake(self.frame.size.width*progress, self.frame.size.height/2);
     [path moveToPoint:startPoint];
     [path addLineToPoint:endPoint];
     return path;
@@ -97,13 +150,40 @@ static CGFloat const kLineWidth = 2.5f;
 {
     CAShapeLayer *layer = [CAShapeLayer layer];
     layer.fillColor = [UIColor clearColor].CGColor;
-    layer.strokeColor = [UIColor whiteColor].CGColor;
-    layer.lineCap = kCALineCapRound;
-    layer.lineJoin = kCALineJoinRound;
+    layer.strokeColor = [UIColor grayColor].CGColor;
+//    layer.lineCap = kCALineCapRound;
+//    layer.lineJoin = kCALineJoinRound;
     layer.frame = self.bounds;
-    layer.lineWidth = kLineWidth;
+    layer.lineWidth = self.frame.size.height;
     return layer;
 }
+
+- (void)setUserInteractionEnabled:(BOOL)userInteractionEnabled
+{
+    [super setUserInteractionEnabled:userInteractionEnabled];
+}
+
+- (void)addBorderToLayer:(UIView *)view
+{
+    CAShapeLayer *border = [CAShapeLayer layer];
+    //  线条颜色
+    border.strokeColor = [UIColor grayColor].CGColor;
+    
+    border.fillColor = nil;
+    
+    border.path = [UIBezierPath bezierPathWithRect:view.bounds].CGPath;
+    
+    border.frame = view.bounds;
+    
+    // 不要设太大 不然看不出效果
+    border.lineWidth = 1;
+    
+//    border.lineCap = @"square";
+    
+    [view.layer addSublayer:border];
+}
+
+
 
 /*
 // Only override drawRect: if you perform custom drawing.

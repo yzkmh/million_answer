@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		130AC3B5200CA4BD0045CA3F /* YXLiveTimerNew.m in Sources */ = {isa = PBXBuildFile; fileRef = 130AC3B4200CA4BD0045CA3F /* YXLiveTimerNew.m */; };
+		130AC3E8200DDC6E0045CA3F /* million_wrong.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 130AC3E3200DDC6D0045CA3F /* million_wrong.m4a */; };
+		130AC3E9200DDC6E0045CA3F /* million_countdown.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 130AC3E4200DDC6D0045CA3F /* million_countdown.m4a */; };
+		130AC3EA200DDC6E0045CA3F /* million_init.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 130AC3E5200DDC6E0045CA3F /* million_init.m4a */; };
+		130AC3EB200DDC6E0045CA3F /* million_invalid.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 130AC3E6200DDC6E0045CA3F /* million_invalid.m4a */; };
+		130AC3EC200DDC6E0045CA3F /* million_right.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 130AC3E7200DDC6E0045CA3F /* million_right.m4a */; };
+		1391677F200F444F00D5FAF4 /* million_right.json in Resources */ = {isa = PBXBuildFile; fileRef = 1391677D200F444F00D5FAF4 /* million_right.json */; };
+		13916780200F444F00D5FAF4 /* million_wrong.json in Resources */ = {isa = PBXBuildFile; fileRef = 1391677E200F444F00D5FAF4 /* million_wrong.json */; };
 		13E5B27E2009E0AC0079D4F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E5B27D2009E0AC0079D4F6 /* AppDelegate.m */; };
 		13E5B2812009E0AC0079D4F6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E5B2802009E0AC0079D4F6 /* ViewController.m */; };
 		13E5B2842009E0AC0079D4F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13E5B2822009E0AC0079D4F6 /* Main.storyboard */; };
@@ -15,6 +23,13 @@
 		13E5B28C2009E0AC0079D4F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E5B28B2009E0AC0079D4F6 /* main.m */; };
 		13E5B2962009E0AC0079D4F6 /* demoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E5B2952009E0AC0079D4F6 /* demoTests.m */; };
 		13E5B2A12009E0AC0079D4F6 /* demoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E5B2A02009E0AC0079D4F6 /* demoUITests.m */; };
+		13E5B2B42009E0D90079D4F6 /* YXLiveMillionAnswerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E5B2AE2009E0D70079D4F6 /* YXLiveMillionAnswerButton.m */; };
+		13E5B2B52009E0D90079D4F6 /* YXLiveMillionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E5B2AF2009E0D70079D4F6 /* YXLiveMillionModel.m */; };
+		13E5B2B62009E0D90079D4F6 /* YXLiveNativeAnswerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E5B2B02009E0D80079D4F6 /* YXLiveNativeAnswerView.m */; };
+		13E5B2B92009E2E10079D4F6 /* UIColor+YXTColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E5B2B82009E2E10079D4F6 /* UIColor+YXTColor.m */; };
+		13E5B2BB200A076A0079D4F6 /* million_djs.json in Resources */ = {isa = PBXBuildFile; fileRef = 13E5B2BA200A07690079D4F6 /* million_djs.json */; };
+		13E5B2D1200C5B5D0079D4F6 /* GCDDelay.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E5B2D0200C5B5D0079D4F6 /* GCDDelay.m */; };
+		5C61410934923EE05282E138 /* libPods-demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94B7DB5F7044E3272DFC9F23 /* libPods-demo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +50,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		130AC3B3200CA4BC0045CA3F /* YXLiveTimerNew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXLiveTimerNew.h; sourceTree = "<group>"; };
+		130AC3B4200CA4BD0045CA3F /* YXLiveTimerNew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXLiveTimerNew.m; sourceTree = "<group>"; };
+		130AC3DC200DD30F0045CA3F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		130AC3E3200DDC6D0045CA3F /* million_wrong.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = million_wrong.m4a; sourceTree = "<group>"; };
+		130AC3E4200DDC6D0045CA3F /* million_countdown.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = million_countdown.m4a; sourceTree = "<group>"; };
+		130AC3E5200DDC6E0045CA3F /* million_init.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = million_init.m4a; sourceTree = "<group>"; };
+		130AC3E6200DDC6E0045CA3F /* million_invalid.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = million_invalid.m4a; sourceTree = "<group>"; };
+		130AC3E7200DDC6E0045CA3F /* million_right.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = million_right.m4a; sourceTree = "<group>"; };
+		1391677D200F444F00D5FAF4 /* million_right.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = million_right.json; sourceTree = "<group>"; };
+		1391677E200F444F00D5FAF4 /* million_wrong.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = million_wrong.json; sourceTree = "<group>"; };
 		13E5B2792009E0AC0079D4F6 /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13E5B27C2009E0AC0079D4F6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		13E5B27D2009E0AC0079D4F6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +76,20 @@
 		13E5B29C2009E0AC0079D4F6 /* demoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = demoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13E5B2A02009E0AC0079D4F6 /* demoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = demoUITests.m; sourceTree = "<group>"; };
 		13E5B2A22009E0AC0079D4F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13E5B2AE2009E0D70079D4F6 /* YXLiveMillionAnswerButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXLiveMillionAnswerButton.m; sourceTree = "<group>"; };
+		13E5B2AF2009E0D70079D4F6 /* YXLiveMillionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXLiveMillionModel.m; sourceTree = "<group>"; };
+		13E5B2B02009E0D80079D4F6 /* YXLiveNativeAnswerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXLiveNativeAnswerView.m; sourceTree = "<group>"; };
+		13E5B2B12009E0D80079D4F6 /* YXLiveMillionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXLiveMillionModel.h; sourceTree = "<group>"; };
+		13E5B2B22009E0D80079D4F6 /* YXLiveMillionAnswerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXLiveMillionAnswerButton.h; sourceTree = "<group>"; };
+		13E5B2B32009E0D90079D4F6 /* YXLiveNativeAnswerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXLiveNativeAnswerView.h; sourceTree = "<group>"; };
+		13E5B2B72009E2E10079D4F6 /* UIColor+YXTColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+YXTColor.h"; sourceTree = "<group>"; };
+		13E5B2B82009E2E10079D4F6 /* UIColor+YXTColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+YXTColor.m"; sourceTree = "<group>"; };
+		13E5B2BA200A07690079D4F6 /* million_djs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = million_djs.json; sourceTree = "<group>"; };
+		13E5B2CF200C5B5D0079D4F6 /* GCDDelay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDDelay.h; sourceTree = "<group>"; };
+		13E5B2D0200C5B5D0079D4F6 /* GCDDelay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDDelay.m; sourceTree = "<group>"; };
+		40B57E4F65E28AD00BC6BB95 /* Pods-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-demo/Pods-demo.release.xcconfig"; sourceTree = "<group>"; };
+		4506A6BC9A3A227CCDF82DDE /* Pods-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-demo/Pods-demo.debug.xcconfig"; sourceTree = "<group>"; };
+		94B7DB5F7044E3272DFC9F23 /* libPods-demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C61410934923EE05282E138 /* libPods-demo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,10 +121,29 @@
 		13E5B2702009E0AB0079D4F6 = {
 			isa = PBXGroup;
 			children = (
+				130AC3DC200DD30F0045CA3F /* PrefixHeader.pch */,
+				13E5B2BC200A113E0079D4F6 /* audio */,
+				13E5B2BA200A07690079D4F6 /* million_djs.json */,
+				1391677D200F444F00D5FAF4 /* million_right.json */,
+				1391677E200F444F00D5FAF4 /* million_wrong.json */,
+				13E5B2B72009E2E10079D4F6 /* UIColor+YXTColor.h */,
+				13E5B2B82009E2E10079D4F6 /* UIColor+YXTColor.m */,
+				13E5B2B22009E0D80079D4F6 /* YXLiveMillionAnswerButton.h */,
+				13E5B2AE2009E0D70079D4F6 /* YXLiveMillionAnswerButton.m */,
+				13E5B2B12009E0D80079D4F6 /* YXLiveMillionModel.h */,
+				13E5B2AF2009E0D70079D4F6 /* YXLiveMillionModel.m */,
+				13E5B2B32009E0D90079D4F6 /* YXLiveNativeAnswerView.h */,
+				13E5B2B02009E0D80079D4F6 /* YXLiveNativeAnswerView.m */,
+				13E5B2CF200C5B5D0079D4F6 /* GCDDelay.h */,
+				13E5B2D0200C5B5D0079D4F6 /* GCDDelay.m */,
+				130AC3B3200CA4BC0045CA3F /* YXLiveTimerNew.h */,
+				130AC3B4200CA4BD0045CA3F /* YXLiveTimerNew.m */,
 				13E5B27B2009E0AC0079D4F6 /* demo */,
 				13E5B2942009E0AC0079D4F6 /* demoTests */,
 				13E5B29F2009E0AC0079D4F6 /* demoUITests */,
 				13E5B27A2009E0AC0079D4F6 /* Products */,
+				C4270A712E8F8CB861542CCF /* Pods */,
+				19AB6F0FBA74584E8B955239 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +191,35 @@
 			path = demoUITests;
 			sourceTree = "<group>";
 		};
+		13E5B2BC200A113E0079D4F6 /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				130AC3E4200DDC6D0045CA3F /* million_countdown.m4a */,
+				130AC3E5200DDC6E0045CA3F /* million_init.m4a */,
+				130AC3E6200DDC6E0045CA3F /* million_invalid.m4a */,
+				130AC3E7200DDC6E0045CA3F /* million_right.m4a */,
+				130AC3E3200DDC6D0045CA3F /* million_wrong.m4a */,
+			);
+			path = audio;
+			sourceTree = "<group>";
+		};
+		19AB6F0FBA74584E8B955239 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				94B7DB5F7044E3272DFC9F23 /* libPods-demo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C4270A712E8F8CB861542CCF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4506A6BC9A3A227CCDF82DDE /* Pods-demo.debug.xcconfig */,
+				40B57E4F65E28AD00BC6BB95 /* Pods-demo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +227,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13E5B2A52009E0AC0079D4F6 /* Build configuration list for PBXNativeTarget "demo" */;
 			buildPhases = (
+				4A24514C7E4F194E70F89A61 /* [CP] Check Pods Manifest.lock */,
 				13E5B2752009E0AC0079D4F6 /* Sources */,
 				13E5B2762009E0AC0079D4F6 /* Frameworks */,
 				13E5B2772009E0AC0079D4F6 /* Resources */,
+				C0AD9180EC4D36AFABC73DF5 /* [CP] Embed Pods Frameworks */,
+				1B284CE3695E82052A99C76E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -238,9 +329,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				130AC3E8200DDC6E0045CA3F /* million_wrong.m4a in Resources */,
 				13E5B2892009E0AC0079D4F6 /* LaunchScreen.storyboard in Resources */,
+				130AC3EA200DDC6E0045CA3F /* million_init.m4a in Resources */,
+				1391677F200F444F00D5FAF4 /* million_right.json in Resources */,
+				130AC3EC200DDC6E0045CA3F /* million_right.m4a in Resources */,
+				13E5B2BB200A076A0079D4F6 /* million_djs.json in Resources */,
 				13E5B2862009E0AC0079D4F6 /* Assets.xcassets in Resources */,
+				130AC3E9200DDC6E0045CA3F /* million_countdown.m4a in Resources */,
+				13916780200F444F00D5FAF4 /* million_wrong.json in Resources */,
 				13E5B2842009E0AC0079D4F6 /* Main.storyboard in Resources */,
+				130AC3EB200DDC6E0045CA3F /* million_invalid.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,14 +359,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1B284CE3695E82052A99C76E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-demo/Pods-demo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4A24514C7E4F194E70F89A61 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0AD9180EC4D36AFABC73DF5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-demo/Pods-demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		13E5B2752009E0AC0079D4F6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13E5B2B52009E0D90079D4F6 /* YXLiveMillionModel.m in Sources */,
 				13E5B2812009E0AC0079D4F6 /* ViewController.m in Sources */,
+				13E5B2D1200C5B5D0079D4F6 /* GCDDelay.m in Sources */,
+				13E5B2B62009E0D90079D4F6 /* YXLiveNativeAnswerView.m in Sources */,
+				13E5B2B92009E2E10079D4F6 /* UIColor+YXTColor.m in Sources */,
 				13E5B28C2009E0AC0079D4F6 /* main.m in Sources */,
+				130AC3B5200CA4BD0045CA3F /* YXLiveTimerNew.m in Sources */,
 				13E5B27E2009E0AC0079D4F6 /* AppDelegate.m in Sources */,
+				13E5B2B42009E0D90079D4F6 /* YXLiveMillionAnswerButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,11 +584,15 @@
 		};
 		13E5B2A62009E0AC0079D4F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4506A6BC9A3A227CCDF82DDE /* Pods-demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HF526ANGZB;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";
 				INFOPLIST_FILE = demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yx.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -442,11 +602,15 @@
 		};
 		13E5B2A72009E0AC0079D4F6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40B57E4F65E28AD00BC6BB95 /* Pods-demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HF526ANGZB;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";
 				INFOPLIST_FILE = demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yx.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

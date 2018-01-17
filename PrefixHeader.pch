@@ -9,7 +9,22 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
+//#import "NSArray+YXTUtilities.h"
+//#import "NSArray+YXTTypeCast.h"
+
+//字体大小
+#define kFont(size) [UIFont systemFontOfSize:size]
+#define kFont_bold(size) [UIFont boldSystemFontOfSize:size]
+//图片
+#define kImage(name) [UIImage imageNamed:name]
+
+//弱引用
+#define kWeakSelf(type)   __weak typeof(type) weak##type = type;
+#define kStrongSelf(type) __strong typeof(type) type = weak##type;
+
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
 
 #endif /* PrefixHeader_pch */
