@@ -52,7 +52,6 @@
     self.layer.cornerRadius = frame.size.height/2;
     self.layer.borderColor = [UIColor yxt_colorWithHex:@"DDDDDD"].CGColor;
     self.layer.borderWidth = 0.6f;
-    [self addBorderToLayer:self];
 //    _progressColor = [UIColor colorWithRed:66/255. green:204/255. blue:118/255. alpha:1];
     
     self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(updateUI)];
@@ -163,25 +162,6 @@
     [super setUserInteractionEnabled:userInteractionEnabled];
 }
 
-- (void)addBorderToLayer:(UIView *)view
-{
-    CAShapeLayer *border = [CAShapeLayer layer];
-    //  线条颜色
-    border.strokeColor = [UIColor grayColor].CGColor;
-    
-    border.fillColor = nil;
-    
-    border.path = [UIBezierPath bezierPathWithRect:view.bounds].CGPath;
-    
-    border.frame = view.bounds;
-    
-    // 不要设太大 不然看不出效果
-    border.lineWidth = 1;
-    
-//    border.lineCap = @"square";
-    
-    [view.layer addSublayer:border];
-}
 
 
 

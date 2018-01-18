@@ -11,6 +11,7 @@
 #import "YXLiveMillionAnswerButton.h"
 //#import "LOTAnimationView.h"
 #import <Lottie/LOTAnimationView.h>
+#import "Masonry.h"
 #import <AVFoundation/AVFoundation.h>
 #import "YXLiveTimerNew.h"
 
@@ -120,7 +121,7 @@
     _topLabel.hidden = YES;
     [_contentView addSubview:_topLabel];
     
-    _questionLable = [[UILabel alloc]initWithFrame:CGRectMake(20, 90, CGRectGetWidth(_contentView.frame) - 40, 130)];
+    _questionLable = [[UILabel alloc]initWithFrame:CGRectMake(20, 110, CGRectGetWidth(_contentView.frame) - 40, 60) ];
     _questionLable.font = [UIFont boldSystemFontOfSize:20];
     _questionLable.textAlignment = NSTextAlignmentCenter;
     _questionLable.numberOfLines = 0;
@@ -143,8 +144,21 @@
 }
 - (void)resetFrame
 {
-    CGFloat offsetY = 228.f;
+    
+    CGSize infoSize = CGSizeMake(_questionLable.frame.size.width, MAXFLOAT);
+    
+    NSDictionary *dic = @{NSFontAttributeName : [UIFont systemFontOfSize:20.f ]};
+    
+    CGRect newFrame =  [_model.topicString boundingRectWithSize:infoSize options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:dic context:nil];
+    CGRect labelFrame = _questionLable.frame;
+    labelFrame.size.height = newFrame.size.height;
+    [_questionLable setFrame:labelFrame];
+    
+    CGFloat offsetY = 140 + newFrame.size.height;
+    
     for (int i = 0; i < _validCount; i++) {
+        UIButton *button = [_answerBtnArray objectAtIndex:i];
+        button.frame = CGRectMake(30, offsetY, CGRectGetWidth(_contentView.frame) - 60, 44);
         offsetY += 44 + 10;
     }
     offsetY += 20;

@@ -58,7 +58,7 @@
         YXLiveMillionModel *model = [[YXLiveMillionModel alloc]init];
         model.count = 1;
         model.totalCount = 12;
-        model.topicString = @"这是题目！！！！！！！3232398989899hgjgjhgjhgj898dsadada3";
+        model.topicString = @"这是题目";
         model.watchMode = NO;
         model.answersStr = @[@"12222121",@"1231231231",@"231314211"].mutableCopy;
         model.answersNum = @[@(293723),@(3281731),@(8000)].mutableCopy;
@@ -75,7 +75,7 @@
         YXLiveMillionModel *model = [[YXLiveMillionModel alloc]init];
         model.count = 1;
         model.totalCount = 12;
-        model.topicString = @"这是题目！！！！！！！3232398989899hgjgjhgjhgj898dsadada3";
+        model.topicString = @"这是题目呢，下列哪项不是正确答案，是正确的的是";
         model.watchMode = NO;
         model.answersStr = @[@"12222121",@"1231231231",@"231314211",@"232179821"].mutableCopy;
         model.answersNum = @[@(293723),@(3281731),@(8000),@(5676744)].mutableCopy;
@@ -91,7 +91,7 @@
         YXLiveMillionModel *model = [[YXLiveMillionModel alloc]init];
         model.count = 1;
         model.totalCount = 12;
-        model.topicString = @"这是题目！！！！！！！3232398989899hgjgjhgjhgj898dsadada3";
+        model.topicString = @"这是题目呢，下列哪项不是正确答案，是正确的的是，是不是正确答案";
         model.watchMode = NO;
         model.answersStr = @[@"12222121",@"1231231231",@"231314211"].mutableCopy;
         model.answersNum = @[@(293723),@(3281731),@(8000)].mutableCopy;
@@ -107,7 +107,7 @@
         YXLiveMillionModel *model = [[YXLiveMillionModel alloc]init];
         model.count = 1;
         model.totalCount = 12;
-        model.topicString = @"这是题目！！！！！！！3232398989899hgjgjhgjhgj898dsadada3";
+        model.topicString = @"这是题目呢，下列哪项不是正确答案，是正确的的是，是不是正确答案，这是最长的题目？";
         model.watchMode = YES;
         model.answersStr = @[@"12222121",@"1231231231",@"231314211",@"s9889"].mutableCopy;
         model.type = YXLiveMillionModelTypeAnswer;
